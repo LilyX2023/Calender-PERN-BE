@@ -12,7 +12,7 @@ const createEventsTableQuery = `
     location VARCHAR(255),
     color VARCHAR(7),
     recurring BOOLEAN DEFAULT false,
-    recurrence_pattern JSONB
+    recurrence_pattern JSONB DEFAULT '{}'
   )
 `;
 

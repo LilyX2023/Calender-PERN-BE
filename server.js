@@ -3,6 +3,7 @@ const express = require('express');
 const morgan = require('morgan')
 const cors = require('cors');
 const EventsRouter = require("./controllers/eventCtrl");
+const bodyParser = require('body-parser');
 
 const app = express();
 
@@ -10,7 +11,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());//get data from client side
 app.use(morgan('dev'))
-
+app.use(bodyParser.json());
 app.use('/calendar', EventsRouter)
 
 app.get('/',(req,res)=>{
