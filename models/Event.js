@@ -12,7 +12,7 @@ const createEventsTableQuery = `
     location VARCHAR(255),
     color VARCHAR(7),
     recurring BOOLEAN DEFAULT false,
-    rrule JSONB DEFAULT '{}'::jsonb
+    rrule JSONB DEFAULT '{"freq": "once"}'::jsonb
   )
 `;
 
