@@ -10,7 +10,7 @@ const createEventsTableQuery = `
     start_time TIMESTAMP NOT NULL,
     end_time TIMESTAMP NOT NULL,
     location VARCHAR(255),
-    color VARCHAR(7),
+    eventColor VARCHAR(7),
     recurring BOOLEAN DEFAULT false,
     rrule JSONB DEFAULT '{"freq": "once"}'::jsonb
   )
